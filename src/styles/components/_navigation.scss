@@ -1,0 +1,38 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px $side-padding;
+    // background-color: #f4f4f4;
+    border-bottom: 1px solid #e6e6e6;
+
+    &__logo {
+        img {
+            height: 70px;
+            width: 70px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__item {
+        margin-right: 32px;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: normal;
+        text-decoration: initial;
+        transition: text-decoration 0.2s ease;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
