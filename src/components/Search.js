@@ -37,17 +37,14 @@ export default class Search extends React.Component {
   
     render() {
       return (
-        <div>
-            <input onClick={this.getData} type='button' value='Get Data'  />
-            <br />
-            <br />
-            <label>Field</label>
-            <input value={this.state.value} onChange={this.changeInput} type='text' placeholder='Search...'  />
+        <div className='search'>
+            <input  className='search__get-button' onClick={this.getData} type='button' value='Get Data'  />
+            <input className='search__input' value={this.state.value} onChange={this.changeInput} type='text' placeholder='Search...'  />
 
-            <ul>
+            <ul className='search__list'>
             {
                 this.state.items.map(item =>
-                    <li key={item.item.id}>{item.item.name}</li>
+                    <li className='search__list-item' key={item.item.id}>{item.item.name}</li>
                 )
             }
             </ul>
